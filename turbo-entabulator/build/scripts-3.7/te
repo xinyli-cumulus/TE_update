@@ -1,0 +1,101 @@
+#!/Users/xinyi/.virtualenvs/turbo-entabulator/bin/python
+"""
+This is the wrapper for the Turbo-Entabulator library.
+
+It is used to make set up various input structures to turbo_entabulator.zulu
+as well as to call various output modules from utilities.
+"""
+
+import argparse
+import json
+import sys
+from turbo_entabulator import turbo_entabulator
+from turbo_entabulator.utilities import generate_report
+from turbo_entabulator.m_logger import logger
+
+def main(args): # noqa
+    """
+    Lets parse the input we received.
+
+    This is used to find our cl_support directory
+    as well as any options that the user has passed us to modify
+    the default behavior of Turbo-Entabulator.
+    """
+    parser = argparse.ArgumentParser(description='The Turbo Entabulator!')
+    # Only one of these input methods can and must be specified
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument('cl_support', nargs='?', type=str,
+                       help="Specify the cl-support directory.")
+#    group.add_argument('--json', nargs='?', type=str,
+#                       help="Input string containing a valid JSON.")
+#    group.add_argument('--input-file', '-i', type=argparse.FileType('r'),
+#                       default=sys.stdin,
+#                       help="Input file containing valid JSON "
+#                            "(use '-' to read stdin.")
+    # all other arguments
+    parser.add_argument("--format", "-f", choices=['json', 'text'],
+                        default='text',
+                        help='Output format. (default: \'text\')')
+    parser.add_argument("--output-file", "-o", type=argparse.FileType('w'),
+                        default=sys.stdout,
+                        help="Output file name (default: stdout)")
+    parser.add_argument("--verbose", "-v", action="store_true",
+                        help="Increase output verbosity (debugging)")
+    parser.add_argument("--logs", "-l", dest='print_logs', action="store_true",
+                        help="Print logs of interest")
+    parser.add_argument("--frr-ec", "-ec", dest='frr_ec', action="store_true",
+                        help="Detailed reporting on FRR Error Codes")
+    parser.add_argument("--includes", type=str, dest="includes",
+                        help="Path to JSON includes base directory. "
+                             "This is for development purposes only.")
+    parser.add_argument("--deprecated", "-d", nargs='+', default=[],
+                        help="List of function that should not be executed. "
+                             "Note: Be aware of various interdependencies. "
+                             "Deprecating one function can lead to others "
+                             "not executing.")
+    parser.add_argument("--show", "-s", nargs='+', default=[],
+                        help="Which fields should be included in the object "
+                             "returned by turbo_entabulator.zulu()? (Empty "
+                             "list == ALL) Note: This is useful to limit the "
+                             "scope when using JSON output.")
+    parser.add_argument("--exclude", "-e", nargs='+',
+                        default=[],
+                        help="Which fields to exclude from the object "
+                             "returned by turbo_entabulator.zulu()? (Empty "
+                             "list == show[] argument) Note: This is useful "
+                             "to limit the scope when using JSON output.")
+
+    # Parse all arguments into args object
+    args = parser.parse_args()
+
+    # And now create a dict from them...
+    args_dict = vars(args)
+
+    # Initialize things like the logger, and various other defaults.
+    args_dict = turbo_entabulator.defaults(args_dict)
+
+    # Run TE by passing our input struct to turbo_entabulator.zulu()
+    logger.debug('Running TE against {}'.format(args_dict['cl_support']))
+    results = turbo_entabulator.zulu(args_dict)
+
+    # Perhaps the user wants to write result to a file?
+    if args.output_file:
+        if args.format == 'json':
+            # Write out json
+            dataout = json.dumps(results, indent=2, sort_keys=True)
+        elif args.format == 'text':
+            dataout = generate_report(results, args.print_logs, args.frr_ec)
+
+        # overwrite the results file for output location if not stdout
+        if not args.output_file.isatty:
+            args.output_file.seek(0)
+            args.output_file.write(dataout)
+            args.output_file.truncate()
+        else:
+            args.output_file.write(dataout)
+    exit(0)
+
+
+if __name__ == '__main__':
+    # pass args through to main
+    main(sys.argv[1:])

@@ -1,0 +1,1052 @@
+{
+          "4043309057": {
+                    "title": "Error reading response from label manager",
+                    "description": "Zebra could not read the ZAPI header from the label manager",
+                    "suggestion": "Wait for the error to resolve on its own. If it does not resolve, restart Zebra."
+          },
+          "100663297": {
+                    "title": "Failure to raise or lower privileges",
+                    "description": "FRR attempted to raise or lower its privileges and was unable to do so",
+                    "suggestion": "Ensure that you are running FRR as the frr user and that the user has sufficient privileges to properly access root privileges"
+          },
+          "4043309058": {
+                    "title": "Label manager could not find ZAPI client",
+                    "description": "Zebra was unable to find a ZAPI client matching the given protocol and instance number.",
+                    "suggestion": "Ensure clients which use the label manager are properly configured and running."
+          },
+          "100663298": {
+                    "title": "VRF Failure on Start",
+                    "description": "Upon startup FRR failed to properly initialize and startup the VRF subsystem",
+                    "suggestion": "Ensure that there is sufficient memory to start processes and restart FRR"
+          },
+          "4043309059": {
+                    "title": "Zebra could not relay label manager response",
+                    "description": "Zebra found the client and instance to relay the label manager response or request to, but was not able to do so, possibly because the connection was closed.",
+                    "suggestion": "Ensure clients which use the label manager are properly configured and running."
+          },
+          "100663299": {
+                    "title": "Socket Error",
+                    "description": "When attempting to access a socket a system error has occured and we were unable to properly complete the request",
+                    "suggestion": "Ensure that there are sufficient system resources available and ensure that the frr user has sufficient permisions to work.  If necessary open an Issue"
+          },
+          "100663300": {
+                    "title": "ZAPI Error",
+                    "description": "A version miss-match has been detected between zebra and client protocol",
+                    "suggestion": "Two different versions of FRR have been installed and the install is not properly setup.  Completely stop FRR, remove it from the system and reinstall.  Typically only developers should see this issue."
+          },
+          "4043309061": {
+                    "title": "Mismatch between ZAPI instance and encoded message instance",
+                    "description": "While relaying a request to the external label manager, Zebra noticed that the instance number encoded in the message did not match the client instance number.",
+                    "suggestion": "Notify a developer."
+          },
+          "100663301": {
+                    "title": "ZAPI Error",
+                    "description": "The ZAPI subsystem has detected an encoding issue, between zebra and a client protocol",
+                    "suggestion": "Gather data and open an Issue, also Restart FRR"
+          },
+          "100663302": {
+                    "title": "ZAPI Error",
+                    "description": "The ZAPI subsystem has detected a socket error between zebra and a client",
+                    "suggestion": "Restart FRR"
+          },
+          "100663303": {
+                    "title": "System Call Error",
+                    "description": "FRR has detected a error from using a vital system call and has probably already exited",
+                    "suggestion": "Ensure permissions are correct for FRR files, users and groups are correct. Additionally check that sufficient system resources are available."
+          },
+          "4043309064": {
+                    "title": "Zebra label manager used all available labels",
+                    "description": "Zebra is unable to assign additional label chunks because it has exhausted its assigned label range.",
+                    "suggestion": "Make the label range bigger and restart Zebra."
+          },
+          "100663304": {
+                    "title": "VTY Subsystem Error",
+                    "description": "FRR has detected a problem with the specified configuration file",
+                    "suggestion": "Ensure configuration file exists and has correct permissions for operations Additionally ensure that all config lines are correct as well"
+          },
+          "4043309065": {
+                    "title": "Daemon mismatch when releasing label chunks",
+                    "description": "Zebra noticed a mismatch between a label chunk and a protocol daemon number or instance when releasing unused label chunks.",
+                    "suggestion": "Ignore this error."
+          },
+          "100663305": {
+                    "title": "SNMP Subsystem Error",
+                    "description": "FRR has detected a problem with the snmp library it uses A callback from this subsystem has indicated some error",
+                    "suggestion": "Examine callback message and ensure snmp is properly setup and working"
+          },
+          "4043309066": {
+                    "title": "Zebra did not free any label chunks",
+                    "description": "Zebra's chunk cleanup procedure ran, but no label chunks were released.",
+                    "suggestion": "Ignore this error."
+          },
+          "100663306": {
+                    "title": "Interface Subsystem Error",
+                    "description": "FRR has detected a problem with interface data from the kernel as it deviates from what we would expect to happen via normal netlink messaging",
+                    "suggestion": "Open an Issue with all relevant log files and restart FRR"
+          },
+          "4043309067": {
+                    "title": "Dataplane returned invalid status code",
+                    "description": "The underlying dataplane responded to a Zebra message or other interaction with an unrecognized, unknown or invalid status code.",
+                    "suggestion": "Notify a developer."
+          },
+          "100663307": {
+                    "title": "NameSpace Subsystem Error",
+                    "description": "FRR has detected a problem with NameSpace data from the kernel as it deviates from what we would expect to happen via normal kernel messaging",
+                    "suggestion": "Open an Issue with all relevant log files and restart FRR"
+          },
+          "4043309068": {
+                    "title": "A necessary work queue does not exist.",
+                    "description": "A necessary work queue does not exist.",
+                    "suggestion": "Notify a developer."
+          },
+          "100663308": {
+                    "title": "Developmental Escape Error",
+                    "description": "FRR has detected an issue where new development has not properly updated all code paths.",
+                    "suggestion": "Open an Issue with all relevant log files"
+          },
+          "4043309069": {
+                    "title": "Failed to add FEC for MPLS client",
+                    "description": "A client requested a label binding for a new FEC, but Zebra was unable to add the FEC to its internal table.",
+                    "suggestion": "Notify a developer."
+          },
+          "100663309": {
+                    "title": "ZMQ Subsystem Error",
+                    "description": "FRR has detected an issue with the Zero MQ subsystem and ZeroMQ is not working properly now",
+                    "suggestion": "Open an Issue with all relevant log files and restart FRR"
+          },
+          "4043309070": {
+                    "title": "Failed to remove FEC for MPLS client",
+                    "description": "Zebra was unable to find and remove a FEC in its internal table.",
+                    "suggestion": "Notify a developer."
+          },
+          "100663310": {
+                    "title": "Feature or system unavailable",
+                    "description": "FRR was not compiled with support for a particular feature, or it is not available on the current platform",
+                    "suggestion": "Recompile FRR with the feature enabled, or find out what platforms support the feature"
+          },
+          "4043309071": {
+                    "title": "IRDP message length mismatch",
+                    "description": "The length encoded in the IP TLV does not match the length of the packet received.",
+                    "suggestion": "Notify a developer."
+          },
+          "100663311": {
+                    "title": "SNMP has discovered a warning",
+                    "description": "The SNMP AgentX library has returned a warning that we should report to the end user",
+                    "suggestion": "Gather Log data and open an Issue."
+          },
+          "4043309072": {
+                    "title": "Attempted to perform nexthop update for unknown address family",
+                    "description": "Zebra attempted to perform a nexthop update for unknown address family",
+                    "suggestion": "Notify a developer."
+          },
+          "100663312": {
+                    "title": "The stream subsystem has encountered an error",
+                    "description": "During sanity checking stream.c has detected an error in the data associated with a particular stream",
+                    "suggestion": "Gather log data and open an Issue, restart FRR"
+          },
+          "4043309073": {
+                    "title": "Dataplane installation failure",
+                    "description": "Installation of routes to underlying dataplane failed.",
+                    "suggestion": "Check all configuration parameters for correctness."
+          },
+          "100663313": {
+                    "title": "The Linux namespace subsystem has encountered a parsing error",
+                    "description": "During system startup an invalid parameter for the namesapce was give to FRR",
+                    "suggestion": "Gather log data and open an Issue. restart FRR"
+          },
+          "4043309074": {
+                    "title": "Dataplane deletion failure",
+                    "description": "Deletion of routes from underlying dataplane failed.",
+                    "suggestion": "Check all configuration parameters for correctness."
+          },
+          "100663314": {
+                    "title": "The Event subsystem has detected a slow process",
+                    "description": "The Event subsystem has detected a slow process, this typically indicates that FRR is having trouble completing work in a timely manner.  This can be either a misconfiguration, bug, or some combination therof.",
+                    "suggestion": "Gather log data and open an Issue"
+          },
+          "4043309075": {
+                    "title": "Zebra table lookup failed",
+                    "description": "Zebra attempted to look up a table for a particular address family and subsequent address family, but didn't find anything.",
+                    "suggestion": "If you entered a command to trigger this error, make sure you entered the arguments correctly. Check your config file for any potential errors. If these look correct, seek help."
+          },
+          "100663315": {
+                    "title": "Reached the Route-Map Recursion Limit",
+                    "description": "The Route-Map subsystem has detected a route-map depth of RMAP_RECURSION_LIMIT and has stopped processing",
+                    "suggestion": "Re-work the Route-Map in question to not have so many route-map statements, or recompile FRR with a higher limit"
+          },
+          "4043309076": {
+                    "title": "Netlink backend not available",
+                    "description": "FRR was not compiled with support for Netlink. Any operations that require Netlink will fail.",
+                    "suggestion": "Recompile FRR with Netlink, or install a package that supports this feature."
+          },
+          "100663316": {
+                    "title": "Unable to open configuration file",
+                    "description": "The config subsystem attempted to read in it's configuration file which failed, so we are falling back to the backup config file to see if it is available",
+                    "suggestion": "Create configuration file"
+          },
+          "4043309077": {
+                    "title": "Protocol Buffers backend not available",
+                    "description": "FRR was not compiled with support for Protocol Buffers. Any operations that require Protobuf will fail.",
+                    "suggestion": "Recompile FRR with Protobuf support, or install a package that supports this feature."
+          },
+          "100663317": {
+                    "title": "The VRF subsystem has encountered a parsing error",
+                    "description": "The VRF subsystem, during initialization, has found a parsing error with input it has received",
+                    "suggestion": "Check the length of the vrf name and adjust accordingly"
+          },
+          "4043309078": {
+                    "title": "Table manager used all available IDs",
+                    "description": "Zebra's table manager used up all IDs available to it and can't assign any more.",
+                    "suggestion": "Reconfigure Zebra with a larger range of table IDs."
+          },
+          "4043309079": {
+                    "title": "Daemon mismatch when releasing table chunks",
+                    "description": "Zebra noticed a mismatch between a table ID chunk and a protocol daemon number instance when releasing unused table chunks.",
+                    "suggestion": "Ignore this error."
+          },
+          "4043309080": {
+                    "title": "Zebra did not free any table chunks",
+                    "description": "Zebra's table chunk cleanup procedure ran, but no table chunks were released.",
+                    "suggestion": "Ignore this error."
+          },
+          "4043309081": {
+                    "title": "Address family specifier unrecognized",
+                    "description": "Zebra attempted to process information from somewhere that included an address family specifier, but did not recognize the provided specifier.",
+                    "suggestion": "Ensure that your configuration is correct. If it is, notify a developer."
+          },
+          "4043309082": {
+                    "title": "Incorrect protocol for table manager client",
+                    "description": "Zebra's table manager only accepts connections from daemons managing dynamic routing protocols, but received a connection attempt from a daemon that does not meet this criterion.",
+                    "suggestion": "Notify a developer."
+          },
+          "4043309083": {
+                    "title": "Mismatch between message and client protocol and/or instance",
+                    "description": "Zebra detected a mismatch between a client's protocol and/or instance numbers versus those stored in a message transiting its socket.",
+                    "suggestion": "Notify a developer."
+          },
+          "4043309084": {
+                    "title": "Label manager unable to assign label chunk",
+                    "description": "Zebra's label manager was unable to assign a label chunk to client.",
+                    "suggestion": "Ensure that Zebra has a sufficient label range available and that there is not a range collision."
+          },
+          "4043309085": {
+                    "title": "Label request from unidentified client",
+                    "description": "Zebra's label manager received a label request from an unidentified client.",
+                    "suggestion": "Notify a developer."
+          },
+          "4043309086": {
+                    "title": "Table manager unable to assign table chunk",
+                    "description": "Zebra's table manager was unable to assign a table chunk to a client.",
+                    "suggestion": "Ensure that Zebra has sufficient table ID range available and that there is not a range collision."
+          },
+          "4043309087": {
+                    "title": "Table request from unidentified client",
+                    "description": "Zebra's table manager received a table request from an unidentified client.",
+                    "suggestion": "Notify a developer."
+          },
+          "4043309088": {
+                    "title": "Cannot set receive buffer size",
+                    "description": "Socket receive buffer size could not be set in the kernel",
+                    "suggestion": "Ignore this error."
+          },
+          "4043309089": {
+                    "title": "Unknown Netlink message type",
+                    "description": "Zebra received a Netlink message with an unrecognized type field.",
+                    "suggestion": "Verify that you are running the latest version of FRR to ensure kernel compatibility. If the problem persists, notify a developer."
+          },
+          "4043309090": {
+                    "title": "Receive buffer overrun",
+                    "description": "The kernel's buffer for a socket has been overrun, rendering the socket invalid.",
+                    "suggestion": "Zebra will restart itself. Notify a developer if this issue shows up frequently."
+          },
+          "4043309091": {
+                    "title": "Netlink message length mismatch",
+                    "description": "Zebra received a Netlink message with incorrect length fields.",
+                    "suggestion": "Notify a developer."
+          },
+          "4043309092": {
+                    "title": "Received unexpected response from kernel",
+                    "description": "Received unexpected response from the kernel via Netlink.",
+                    "suggestion": "Notify a developer."
+          },
+          "4043309093": {
+                    "title": "Bad sequence number in Netlink message",
+                    "description": "Zebra received a Netlink message with a bad sequence number.",
+                    "suggestion": "Notify a developer."
+          },
+          "4043309094": {
+                    "title": "Multipath number was out of valid range",
+                    "description": "Multipath number specified to Zebra must be in the appropriate range",
+                    "suggestion": "Provide a multipath number that is within its accepted range"
+          },
+          "4043309095": {
+                    "title": "String could not be parsed as IP prefix",
+                    "description": "There was an attempt to parse a string as an IPv4 or IPv6 prefix, but the string could not be parsed and this operation failed.",
+                    "suggestion": "Notify a developer."
+          },
+          "4043309096": {
+                    "title": "Failed to add MAC address to interface",
+                    "description": "Zebra attempted to assign a MAC address to a vxlan interface but failed",
+                    "suggestion": "Notify a developer."
+          },
+          "4043309097": {
+                    "title": "Failed to delete VNI",
+                    "description": "Zebra attempted to delete a VNI entry and failed",
+                    "suggestion": "Notify a developer."
+          },
+          "4043309098": {
+                    "title": "Adding remote VTEP failed",
+                    "description": "Zebra attempted to add a remote VTEP and failed.",
+                    "suggestion": "Notify a developer."
+          },
+          "4043309099": {
+                    "title": "Adding VNI failed",
+                    "description": "Zebra attempted to add a VNI hash to an interface and failed",
+                    "suggestion": "Notify a developer."
+          },
+          "4043309100": {
+                    "title": "Zebra failed to read namespace inotify information",
+                    "description": "Zebra received an event from inotify, but failed to read what it was.",
+                    "suggestion": "Notify a developer."
+          },
+          "4043309101": {
+                    "title": "Zebra label manager received malformed label request",
+                    "description": "Zebra's label manager received a label request from a client whose protocol type does not match the protocol field received in the message.",
+                    "suggestion": "This is a bug. Please report it."
+          },
+          "4043309102": {
+                    "title": "Zebra failed to install LSP into the kernel",
+                    "description": "Zebra made an attempt to install a label switched path, but the kernel indicated that the installation was not successful.",
+                    "suggestion": "Wait for Zebra to reattempt installation."
+          },
+          "4043309103": {
+                    "title": "Zebra failed to remove LSP from the kernel",
+                    "description": "Zebra made an attempt to remove a label switched path, but the kernel indicated that the deletion was not successful.",
+                    "suggestion": "Wait for Zebra to reattempt deletion."
+          },
+          "4043309104": {
+                    "title": "Zebra will not run with MPLS support",
+                    "description": "Zebra noticed that the running kernel does not support MPLS, so it disabled MPLS support.",
+                    "suggestion": "If you want MPLS support, upgrade the kernel to a version that provides MPLS support."
+          },
+          "4043309105": {
+                    "title": "A call to sysctl() failed",
+                    "description": "sysctl() returned a nonzero exit code, indicating an error.",
+                    "suggestion": "The log message should contain further details on the specific error that occurred; investigate the reported error."
+          },
+          "4043309107": {
+                    "title": "Zebra failed to create namespace VRF",
+                    "description": "Zebra failed to create namespace VRF",
+                    "suggestion": ""
+          },
+          "4043309108": {
+                    "title": "Zebra attempted to delete nonexistent namespace",
+                    "description": "Zebra attempted to delete a particular namespace, but no VRF associated with that namespace could be found to delete.",
+                    "suggestion": "Please report this bug."
+          },
+          "4043309109": {
+                    "title": "Zebra received ICMP packet with invalid checksum",
+                    "description": "Zebra received an ICMP packet with a bad checksum and has silently ignored it.",
+                    "suggestion": "If the problem continues to occur, investigate the source of the bad ICMP packets."
+          },
+          "4043309110": {
+                    "title": "Zebra received ICMP packet with bad type code",
+                    "description": "Zebra received an ICMP packet with a bad code for the message type and has silently ignored it.",
+                    "suggestion": "If the problem continues to occur, investigate the source of the bad ICMP packets."
+          },
+          "4043309111": {
+                    "title": "Zebra received IRDP packet while operating in wrong mode",
+                    "description": "Zebra received a multicast IRDP packet while operating in unicast mode, or vice versa.",
+                    "suggestion": "If you wish to receive the messages, change your IRDP settings accordingly."
+          },
+          "4043309112": {
+                    "title": "Zebra received IRDP packet with bad type",
+                    "description": "THIS IS BULLSHIT REMOVE ME",
+                    "suggestion": "asdf"
+          },
+          "4043309113": {
+                    "title": "Zebra could not find table for next hop",
+                    "description": "Zebra attempted to add a next hop but could not find the appropriate table to install it in.",
+                    "suggestion": "Please report this bug."
+          },
+          "4043309114": {
+                    "title": "Zebra interface listing failed",
+                    "description": "Zebra encountered an error attempting to query sysctl for a list of interfaces on the system.",
+                    "suggestion": "Check that Zebra is running with the appropriate permissions. If it is, please report this as a bug."
+          },
+          "4043309115": {
+                    "title": "Unknown message format for Zebra's FPM module",
+                    "description": "Zebra's FPM module takes an argument which specifies the message format to use, but the format was either not provided or was not a valid format. The FPM interface will be disabled.",
+                    "suggestion": "Provide or correct the module argument to provide a valid format. See documentation for further information."
+          },
+          "4043309116": {
+                    "title": "Zebra client connection failed",
+                    "description": "A Zebra client encountered an I/O error and is shutting down. This can occur under normal circumstances, such as when FRR is restarting or shutting down; it can also happen if the daemon crashed. Usually this warning can be ignored.",
+                    "suggestion": "Ignore this warning, it is mostly informational."
+          },
+          "4043309117": {
+                    "title": "Zebra failed to send message to client",
+                    "description": "Zebra attempted to send a message to one of its clients, but the write operation failed. The connection will be closed.",
+                    "suggestion": "Ignore this warning, it is mostly informational."
+          },
+          "4043309118": {
+                    "title": "Zebra received Netlink message with invalid family",
+                    "description": "Zebra received a Netlink message with an invalid address family.",
+                    "suggestion": "Inspect the logged address family and submit it with a bug report."
+          },
+          "4043309119": {
+                    "title": "Zebra tried to remove address from unknown subnet",
+                    "description": "Zebra attempted to remove an address from an unknown subnet.",
+                    "suggestion": "This is a bug, please report it."
+          },
+          "4043309120": {
+                    "title": "Zebra tried to remove unregistered address",
+                    "description": "Zebra attempted to remove an address from a subnet it was not registered on.",
+                    "suggestion": "This is a bug, please report it."
+          },
+          "4043309121": {
+                    "title": "Interface is up but PTM check has not completed",
+                    "description": "Zebra noticed that an interface came up and attempted to perform its usual setup procedures, but the PTM check failed and the operation was aborted.",
+                    "suggestion": "If the problem persists, ensure that the interface is actually up and that PTM is functioning properly."
+          },
+          "4043309122": {
+                    "title": "Kernel rejected sourcedest route",
+                    "description": "Zebra attempted to install a sourcedest route into the kernel, but the kernel did not acknowledge its installation. The route is unsupported.",
+                    "suggestion": "Check configuration values for correctness"
+          },
+          "4043309123": {
+                    "title": "Zebra encountered an unknown interface specifier",
+                    "description": "Zebra was asked to look up an interface with a given name or index, but could not find the interface corresponding to the given name or index.",
+                    "suggestion": "Check configuration values for correctness."
+          },
+          "4043309124": {
+                    "title": "Zebra could not find the specified VRF",
+                    "description": "Zebra tried to look up a VRF, either by name or ID, and could not find it. This could be due to internal inconsistency (a bug) or a configuration error.",
+                    "suggestion": "Check configuration values for correctness. If values are correct, please file a bug report."
+          },
+          "4043309125": {
+                    "title": "More nexthops were provided than the configured multipath limit",
+                    "description": "A route with multiple nexthops was given, but the number of nexthops exceeded the configured multipath limit.",
+                    "suggestion": "Reduce the number of nexthops, or increase the multipath limit."
+          },
+          "4043309126": {
+                    "title": "Zebra failed to create one or more nexthops",
+                    "description": "While attempting to create nexthops for a route installation operation, Zebra found that it was unable to create one or more of the given nexthops.",
+                    "suggestion": "Check configuration values for correctness. If they are correct, report this as a bug."
+          },
+          "4043309127": {
+                    "title": "Zebra received sourcedest route install without IPv6 address family",
+                    "description": "Zebra received a message from a client requesting a sourcedest route installation, but the address family was not set to IPv6. Only IPv6 is supported for sourcedest routing.",
+                    "suggestion": "This is a bug; please report it."
+          },
+          "4043309128": {
+                    "title": "Zebra received an installation / creation request for a pseudowire that already exists",
+                    "description": "Zebra received an installation or creation request for a pseudowire that already exists, so the installation / creation has been skipped.",
+                    "suggestion": "This message is informational."
+          },
+          "4043309129": {
+                    "title": "Zebra received uninstall request for a pseudowire that doesn't exist",
+                    "description": "Zebra received an uninstall request for a pseudowire that doesn't exist, so the uninstallation has been skipped.",
+                    "suggestion": "This message is informational."
+          },
+          "4043309130": {
+                    "title": "Zebra received an uninstallation / deletion request for a pseudowire that already exists",
+                    "description": "Zebra received an uninstallation / deletion request for a pseudowire that doesn't exist, so the uninstallation / deletion has been skipped.",
+                    "suggestion": "This message is informational."
+          },
+          "4043309131": {
+                    "title": "No address on interface",
+                    "description": "Zebra attempted to retrieve a connected address for an interface, but the interface had no connected addresses.",
+                    "suggestion": "This warning is situational; it is usually informative but can indicate a misconfiguration."
+          },
+          "4043309132": {
+                    "title": "Zebra failed to add address to interface",
+                    "description": "Zebra attempted to add an address to an interface but was unsuccessful.",
+                    "suggestion": "Check configuration values for correctness."
+          },
+          "4043309133": {
+                    "title": "Zebra could not enable IRDP on interface",
+                    "description": "Zebra attempted to enable IRDP on an interface, but could not create the IRDP socket. The system may be out of socket resources, or privilege elevation may have failed.",
+                    "suggestion": "Verify that Zebra has the appropriate privileges and that the system has sufficient socket resources."
+          },
+          "4043309134": {
+                    "title": "Zebra attempted to enable IRDP on an interface, but the interface was down",
+                    "description": "Zebra attempted to enable IRDP on an interface, but the interface was down.",
+                    "suggestion": "Bring up the interface that IRDP is desired on."
+          },
+          "4043309135": {
+                    "title": "Zebra cannot enable IRDP on interface because multicast is disabled",
+                    "description": "Zebra attempted to enable IRDP on an interface, but multicast functionality was not enabled on the interface.",
+                    "suggestion": "Enable multicast on the interface."
+          },
+          "4043309136": {
+                    "title": "Zebra received warning message from Netlink",
+                    "description": "Zebra received a warning message from Netlink",
+                    "suggestion": "This message is informational. See the Netlink error message for details."
+          },
+          "4043309137": {
+                    "title": "Zebra could not access /var/run/netns",
+                    "description": "Zebra tried to verify that the run directory for Linux network namespaces existed, but this test failed.",
+                    "suggestion": "Ensure that Zebra has the proper privileges to access this directory."
+          },
+          "4043309138": {
+                    "title": "Zebra received unknown address family on interface",
+                    "description": "Zebra received a notification of a connected prefix on an interface but did not recognize the address family as IPv4 or IPv6",
+                    "suggestion": "This message is informational."
+          },
+          "4043309139": {
+                    "title": "Zebra route has same destination address as local interface",
+                    "description": "Zebra noticed that a route on an interface has the same destination address as an address on the interface itself, which may cause issues with routing protocols.",
+                    "suggestion": "Investigate the source of the route to determine why the destination and interface addresses are the same."
+          },
+          "4043309140": {
+                    "title": "Zebra broadcast address sanity check failed",
+                    "description": "Zebra computed the broadcast address for a connected prefix based on the netmask and found that it did not match the broadcast address it received for the prefix on that interface",
+                    "suggestion": "Investigate the source of the broadcast address to determine why it does not match the computed address."
+          },
+          "4043309141": {
+                    "title": "Zebra encountered unknown address family during redistribution",
+                    "description": "During a redistribution operation Zebra encountered an unknown address family.",
+                    "suggestion": "This warning can be ignored; the redistribution operation will skip the unknown address family."
+          },
+          "4043309142": {
+                    "title": "Zebra advertising unusable interface address",
+                    "description": "Zebra is advertising an address on an interface that is not yet fully installed on the interface.",
+                    "suggestion": "This message is informational. The address should show up on the interface shortly after advertisement."
+          },
+          "4043309143": {
+                    "title": "Zebra received route advertisement with parameter mismatch",
+                    "description": "Zebra received a router advertisement, but one of the non-critical parameters (AdvCurHopLimit, AdvManagedFlag, AdvOtherConfigFlag, AdvReachableTime or AdvRetransTimer) does not match Zebra's local settings.",
+                    "suggestion": "This message is informational; the route advertisement will be processed as normal. If issues arise due to the parameter mismatch, check Zebra's router advertisement configuration."
+          },
+          "4043309144": {
+                    "title": "Zebra received kernel message with uknown version",
+                    "description": "Zebra received a message from the kernel with a message version that does not match Zebra's internal version. Depending on version compatibility, this may cause issues sending and receiving messages to the kernel.",
+                    "suggestion": "If issues arise, check if there is a version of FRR available for your kernel version."
+          },
+          "4043309145": {
+                    "title": "Zebra could not determine proper gateway for kernel route",
+                    "description": "Zebra attempted to install a route into the kernel, but noticed it had no gateway and no interface with a gateway could be located.",
+                    "suggestion": "Check configuration values for correctness."
+          },
+          "4043309146": {
+                    "title": "Zebra exceeded maximum LSP labels for a single rtmsg",
+                    "description": "Zebra attempted to push more than one label into the kernel; the maximum on OpenBSD is 1 label.",
+                    "suggestion": "This message is informational."
+          },
+          "4043309147": {
+                    "title": "EVPN MAC already learnt as remote sticky MAC",
+                    "description": "Zebra tried to handle a local MAC addition but noticed that it had already learnt the MAC from a remote peer.",
+                    "suggestion": "Check configuration values for correctness."
+          },
+          "4043309148": {
+                    "title": "Kernel does not support IPv6 sourcedest routes",
+                    "description": "Zebra attempted to install a sourcedest route into the kernel, but IPv6 sourcedest routes are not supported on the current kernel.",
+                    "suggestion": "Do not use v6 sourcedest routes, or upgrade your kernel."
+          },
+          "4043309149": {
+                    "title": "EVPN MAC is detected duplicate",
+                    "description": "Zebra has hit duplicate address detection threshold which means host MAC is moving.",
+                    "suggestion": "Check network topology to detect duplicate host MAC for correctness."
+          },
+          "4043309150": {
+                    "title": "EVPN IP is detected duplicate by MAC",
+                    "description": "Zebra has hit duplicate address detection threshold which means MAC-IP pair is moving.",
+                    "suggestion": "Check network topology to detect duplicate host MAC for correctness."
+          },
+          "4043309151": {
+                    "title": "EVPN IP is detected duplicate",
+                    "description": "Zebra has hit duplicate address detection threshold which means host IP is moving.",
+                    "suggestion": "Check network topology to detect duplicate host IP for correctness."
+          },
+          "134217729": {
+                    "title": "Failure to process a packet",
+                    "description": "OSPF attempted to process a received packet but could not",
+                    "suggestion": "Most likely a bug. If the problem persists, report the problem for troubleshooting"
+          },
+          "134217730": {
+                    "title": "Failure to process Router LSA",
+                    "description": "OSPF attempted to process a Router LSA but Advertising ID mismatch with link id",
+                    "suggestion": "Check OSPF network config for any config issue, If the problem persists, report the problem for troubleshooting"
+          },
+          "134217731": {
+                    "title": "OSPF Domain Corruption",
+                    "description": "OSPF attempted to process a Router LSA but Advertising ID mismatch with link id",
+                    "suggestion": "Check OSPF network Database for corrupted LSA, If the problem persists, shutdown OSPF domain and report the problem for troubleshooting"
+          },
+          "134217732": {
+                    "title": "OSPF Initialization failure",
+                    "description": "OSPF failed to initialized OSPF default insance",
+                    "suggestion": "Ensure there is adequate memory on the device. If the problem persists, report the problem for troubleshooting"
+          },
+          "134217733": {
+                    "title": "OSPF SR Invalid DB",
+                    "description": "OSPF Segment Routing Database is invalid",
+                    "suggestion": "Most likely a bug. If the problem persists, report the problem for troubleshooting"
+          },
+          "134217734": {
+                    "title": "OSPF SR hash node creation failed",
+                    "description": "OSPF Segment Routing node creation failed",
+                    "suggestion": "Most likely a bug. If the problem persists, report the problem for troubleshooting"
+          },
+          "134217735": {
+                    "title": "OSPF SR Invalid LSA ID",
+                    "description": "OSPF Segment Routing invalid lsa id",
+                    "suggestion": "Restart OSPF instance, If the problem persists, report the problem for troubleshooting"
+          },
+          "134217736": {
+                    "title": "OSPF SR Invalid Algorithm",
+                    "description": "OSPF Segment Routing invalid Algorithm",
+                    "suggestion": "Most likely a bug. If the problem persists, report the problem for troubleshooting"
+          },
+          "134217737": {
+                    "title": "OSPF FSM invalid state detected",
+                    "description": "OSPF has attempted to change states when it should not be able to",
+                    "suggestion": "Gather log files and open an issue"
+          },
+          "134217738": {
+                    "title": "OSPF Encountered a Large Hello",
+                    "description": "OSPF attempted to send a Hello larger than MTU but did not",
+                    "suggestion": "Too many neighbors configured on a single interface. Suggestion is to decrease the number of neighbors on a single interface/subnet"
+          },
+          "134217739": {
+                    "title": "OSPF does not support `set metric +rtt/-rtt`",
+                    "description": "This implementation of OSPF does not currently support `set metric +rtt/-rtt`",
+                    "suggestion": "Do not use this particular set command for an ospf route-map"
+          },
+          "134217740": {
+                    "title": "OSPF has noticed a MD5 issue",
+                    "description": "Something has gone wrong with the calculation of the MD5 data",
+                    "suggestion": "Ensure your key is correct, gather log data from this side as well as peer and open an Issue"
+          },
+          "134217741": {
+                    "title": "OSPF has detected packet information missmatch",
+                    "description": "OSPF has detected that packet information received is incorrect",
+                    "suggestion": "Ensure interface configuration is correct, gather log files from here and the peer and open an Issue"
+          },
+          "134217742": {
+                    "title": "OSPF has determined that a LSA packet will be too large",
+                    "description": "OSPF has received data that is causing it to recalculate how large packets should be and has discovered that the packet size needed would be too large and we will need to fragment packets",
+                    "suggestion": "Further divide up your network with areas"
+          },
+          "134217743": {
+                    "title": "OSPF has received a LSA-type that it was not expecting",
+                    "description": "OSPF has received a LSA-type that it was not expecting during processing",
+                    "suggestion": "Gather log data from this machine and it's peer and open an Issue"
+          },
+          "134217744": {
+                    "title": "OSPF has discovered inconsistent internal state for a LSA",
+                    "description": "During handling of a LSA, OSPF has discovered that the LSA's internal state is inconsistent",
+                    "suggestion": "Gather log data and open an Issue"
+          },
+          "134217745": {
+                    "title": "OSPF has failed to properly register Opaque Handler",
+                    "description": "During initialization OSPF has detected a failure to install an opaque handler",
+                    "suggestion": "Gather log data and open an Issue"
+          },
+          "134217746": {
+                    "title": "OSPF has received TE information that it was not expecting",
+                    "description": "OSPF has received TE information that it was not expecting during normal processing of data",
+                    "suggestion": "Gather log data from this machine and it's peer and open an Issue"
+          },
+          "134217747": {
+                    "title": "OSPF was unable to save the LSA into it's database",
+                    "description": "During processing of a new lsa and attempting to save the lsa into the OSPF database, this process failed.",
+                    "suggestion": "Gather log data from this machine and open an Issue"
+          },
+          "134217748": {
+                    "title": "OSPF has received a NULL lsa pointer",
+                    "description": "When processing a LSA update we have found and noticed an internal error where we are passing around a NULL pointer",
+                    "suggestion": "Gather data from this machine and it's peer and open an Issue"
+          },
+          "134217749": {
+                    "title": "OSPF has received EXT information that leaves it in an unexpected state",
+                    "description": "While processing EXT LSA information, OSPF has noticed that the internal state of OSPF has gotten inconsistent",
+                    "suggestion": "Gather data from this machine and it's peer and open an Issue"
+          },
+          "134217750": {
+                    "title": "OSPF attempted to look up a LSA and it was not found",
+                    "description": "During processing of new LSA information, we attempted to look up an old LSA and it was not found",
+                    "suggestion": "Gather data from this machine and open an Issue"
+          },
+          "134217751": {
+                    "title": "OSPF has detected more than 1 neighbor on a P2P interface",
+                    "description": "If you configure a ospf interface as P2P we should not detect more than one neighbor on the interface",
+                    "suggestion": "Fix your config"
+          },
+          "134217752": {
+                    "title": "OSPF has detected an invalid LSA size",
+                    "description": "OSPF has detected a state where we are attempting to grow a LSA but the LSA has reached it's maximum size",
+                    "suggestion": "Gather data and open an Issue"
+          },
+          "33554433": {
+                    "title": "BGP attribute flag is incorrect",
+                    "description": "BGP attribute flag is set to the wrong value (Optional/Transitive/Partial)",
+                    "suggestion": "Determine the soure of the attribute and determine why the attribute flag has been set incorrectly"
+          },
+          "33554434": {
+                    "title": "BGP attribute length is incorrect",
+                    "description": "BGP attribute length is incorrect",
+                    "suggestion": "Determine the soure of the attribute and determine why the attribute length has been set incorrectly"
+          },
+          "33554435": {
+                    "title": "BGP attribute origin value invalid",
+                    "description": "BGP attribute origin value is invalid",
+                    "suggestion": "Determine the soure of the attribute and determine why the origin attribute has been set incorrectly"
+          },
+          "33554436": {
+                    "title": "BGP as path is invalid",
+                    "description": "BGP as path has been malformed",
+                    "suggestion": "Determine the soure of the update and determine why the as path has been set incorrectly"
+          },
+          "33554437": {
+                    "title": "BGP as path first as is invalid",
+                    "description": "BGP update has invalid first as in as path",
+                    "suggestion": "Determine the soure of the update and determine why the as path first as value has been set incorrectly"
+          },
+          "33554439": {
+                    "title": "BGP PMSI tunnel attribute type is invalid",
+                    "description": "BGP update has invalid type for PMSI tunnel",
+                    "suggestion": "Determine the soure of the update and determine why the PMSI tunnel attribute type has been set incorrectly"
+          },
+          "33554440": {
+                    "title": "BGP PMSI tunnel attribute length is invalid",
+                    "description": "BGP update has invalid length for PMSI tunnel",
+                    "suggestion": "Determine the soure of the update and determine why the PMSI tunnel attribute length has been set incorrectly"
+          },
+          "33554442": {
+                    "title": "BGP peergroup operated on in error",
+                    "description": "BGP operating on peer-group instead of peers included",
+                    "suggestion": "Ensure the config doesn't contain peergroups contained within peergroups"
+          },
+          "33554443": {
+                    "title": "BGP failed to delete peer structure",
+                    "description": "BGP was unable to delete peer structure when address-family removed",
+                    "suggestion": "Determine if all expected peers are removed and restart FRR if not. Most likely a bug"
+          },
+          "33554444": {
+                    "title": "BGP failed to get table chunk memory",
+                    "description": "BGP unable to get chunk memory for table manager",
+                    "suggestion": "Ensure there is adequate memory on the device to support the table requirements"
+          },
+          "33554445": {
+                    "title": "BGP received MACIP with invalid IP addr len",
+                    "description": "BGP received MACIP with invalid IP addr len from Zebra",
+                    "suggestion": "Verify MACIP entries inserted in Zebra are correct.  Most likely a bug"
+          },
+          "33554446": {
+                    "title": "BGP received invalid label manager message",
+                    "description": "BGP received invalid label manager message from label manager",
+                    "suggestion": "Label manager sent invalid essage to BGP for wrong protocol, instance, etc. Most likely a bug"
+          },
+          "33554447": {
+                    "title": "BGP unable to allocate memory for JSON output",
+                    "description": "BGP attempted to generate JSON output and was unable to allocate the memory required",
+                    "suggestion": "Ensure that the device has adequate memory to suport the required functions"
+          },
+          "33554448": {
+                    "title": "BGP update had attributes too long to send",
+                    "description": "BGP attempted to send an update but the attributes were too long to fit",
+                    "suggestion": "Most likely a bug. If the problem persists, report the problem for troubleshooting"
+          },
+          "33554449": {
+                    "title": "BGP update group creation failed",
+                    "description": "BGP attempted to create an update group but was unable to",
+                    "suggestion": "Most likely a bug. If the problem persists, report the problem for troubleshooting"
+          },
+          "33554450": {
+                    "title": "BGP error creating update packet",
+                    "description": "BGP attempted to create an update packet but was unable to",
+                    "suggestion": "Most likely a bug. If the problem persists, report the problem for troubleshooting"
+          },
+          "33554451": {
+                    "title": "BGP error receiving open packet",
+                    "description": "BGP received an open from a peer that was invalid",
+                    "suggestion": "Determine the sending peer and correct his invalid open packet"
+          },
+          "33554452": {
+                    "title": "BGP error sending to peer",
+                    "description": "BGP attempted to respond to open from a peer and failed",
+                    "suggestion": "BGP attempted to respond to an open and could not sene the packet. Check local IP address for source"
+          },
+          "33554453": {
+                    "title": "BGP error receiving from  peer",
+                    "description": "BGP received an update from a peer but status was incorrect",
+                    "suggestion": "Most likely a bug. If the problem persists, report the problem for troubleshooting"
+          },
+          "33554454": {
+                    "title": "BGP error receiving update packet",
+                    "description": "BGP received an invalid update packet",
+                    "suggestion": "Determine the source of the update and resolve the invalid update being sent"
+          },
+          "33554455": {
+                    "title": "BGP error due to capability not enabled",
+                    "description": "BGP attempted a function that did not have the capability enabled",
+                    "suggestion": "Enable the capability if this functionality is desired"
+          },
+          "33554456": {
+                    "title": "BGP error receiving notify message",
+                    "description": "BGP unable to process notification message",
+                    "suggestion": "BGP notify received while in stopped state. If the problem persists, report for troubleshooting"
+          },
+          "33554457": {
+                    "title": "BGP error receiving keepalive packet",
+                    "description": "BGP unable to process keepalive packet",
+                    "suggestion": "BGP keepalive received while in stopped state. If the problem persists, report for troubleshooting"
+          },
+          "33554458": {
+                    "title": "BGP error receiving route refresh message",
+                    "description": "BGP unable to process route refresh message",
+                    "suggestion": "BGP route refresh received while in stopped state. If the problem persists, report for troubleshooting"
+          },
+          "33554459": {
+                    "title": "BGP error capability message",
+                    "description": "BGP unable to process received capability",
+                    "suggestion": "BGP capability message received while in stopped state. If the problem persists, report for troubleshooting"
+          },
+          "33554460": {
+                    "title": "BGP error with nexthopo update",
+                    "description": "BGP unable to process nexthop update",
+                    "suggestion": "BGP received nexthop update but nexthop is not reachable in this bgp instance. Report for troubleshooting"
+          },
+          "33554461": {
+                    "title": "Failure to apply label",
+                    "description": "BGP attempted to attempted to apply a label but could not",
+                    "suggestion": "Most likely a bug. If the problem persists, report the problem for troubleshooting"
+          },
+          "33554462": {
+                    "title": "Multipath specified is invalid",
+                    "description": "BGP was started with an invalid ecmp/multipath value",
+                    "suggestion": "Correct the ecmp/multipath value supplied when starting the BGP daemon"
+          },
+          "33554463": {
+                    "title": "Failure to process a packet",
+                    "description": "BGP attempted to process a received packet but could not",
+                    "suggestion": "Most likely a bug. If the problem persists, report the problem for troubleshooting"
+          },
+          "33554464": {
+                    "title": "Failure to connect to peer",
+                    "description": "BGP attempted to send open to peer but couldn't connect",
+                    "suggestion": "Most likely a bug. If the problem persists, report the problem for troubleshooting"
+          },
+          "33554465": {
+                    "title": "BGP FSM issue",
+                    "description": "BGP neighbor transition problem",
+                    "suggestion": "Most likely a bug. If the problem persists, report the problem for troubleshooting"
+          },
+          "33554466": {
+                    "title": "BGP VNI creation issue",
+                    "description": "BGP could not create a new VNI",
+                    "suggestion": "Most likely a bug. If the problem persists, report the problem for troubleshooting"
+          },
+          "33554467": {
+                    "title": "BGP default instance missing",
+                    "description": "BGP could not find default instance",
+                    "suggestion": "Define a default instance of BGP since some feature requires it's existence"
+          },
+          "33554468": {
+                    "title": "BGP remote VTEP invalid",
+                    "description": "BGP remote VTEP is invalid and cannot be used",
+                    "suggestion": "Correct remote VTEP configuration or resolve the source of the problem"
+          },
+          "33554469": {
+                    "title": "BGP ES route error",
+                    "description": "BGP ES route incorrect, learned both local and remote",
+                    "suggestion": "Correct configuration or addressing so that same not learned both local and remote"
+          },
+          "33554470": {
+                    "title": "BGP EVPN route delete error",
+                    "description": "BGP attempted to delete an EVPN route and failed",
+                    "suggestion": "Most likely a bug. If the problem persists, report the problem for troubleshooting"
+          },
+          "33554471": {
+                    "title": "BGP EVPN install/uninstall error",
+                    "description": "BGP attempted to install or uninstall an EVPN prefix and failed",
+                    "suggestion": "Most likely a bug. If the problem persists, report the problem for troubleshooting"
+          },
+          "33554472": {
+                    "title": "BGP EVPN route received with invalid contents",
+                    "description": "BGP received an EVPN route with invalid contents",
+                    "suggestion": "Determine the source of the EVPN route and resolve whatever is causing invalid contents"
+          },
+          "33554473": {
+                    "title": "BGP EVPN route create error",
+                    "description": "BGP attempted to create an EVPN route and failed",
+                    "suggestion": "Most likely a bug. If the problem persists, report the problem for troubleshooting"
+          },
+          "33554474": {
+                    "title": "BGP EVPN ES entry create error",
+                    "description": "BGP attempted to create an EVPN ES entry and failed",
+                    "suggestion": "Most likely a bug. If the problem persists, report the problem for troubleshooting"
+          },
+          "33554475": {
+                    "title": "BGP config multi-instance issue",
+                    "description": "BGP configuration attempting multiple instances without enabling the feature",
+                    "suggestion": "Correct the configuration so that bgp multiple-instance is enabled if desired"
+          },
+          "33554476": {
+                    "title": "BGP AS configuration issue",
+                    "description": "BGP configuration attempted for a different AS than currently configured",
+                    "suggestion": "Correct the configuration so that the correct BGP AS number is used"
+          },
+          "33554477": {
+                    "title": "BGP EVPN AS and process name mismatch",
+                    "description": "BGP configuration has AS and process name mismatch",
+                    "suggestion": "Correct the configuration so that the BGP AS number and instance name are consistent"
+          },
+          "33554480": {
+                    "title": "BGP AS-path conversion has failed",
+                    "description": "BGP has attempted to convert a AS2 to AS4 path and has failed",
+                    "suggestion": "Open an Issue with all relevant log files and restart FRR"
+          },
+          "33554481": {
+                    "title": "BGP has received a value in a reserved field",
+                    "description": "BGP has received a non-zero value in a reserved field that was used for SNPA-length at one point in time",
+                    "suggestion": "BGP has peered with either a router that is attempting to send SNPA data or it has received a corrupted packet.  If we are peering with a SNPA aware router(unlikely) upgrade that router, else open an Issue after gathering relevant log files"
+          },
+          "33554482": {
+                    "title": "BGP has received an update with missing a missing attribute",
+                    "description": "BGP received update packets must have some minimum attribute information within them",
+                    "suggestion": "Gather log data from this and remote peer and open an Issue with this data"
+          },
+          "33554483": {
+                    "title": "BGP udate packet with attribute data that is too small",
+                    "description": "BGP has received an update packet that is too small to parse a given attribute.  This typically means that something has gone wrong between us and the remote peer",
+                    "suggestion": "Gather log data from this and remote peer and open an Issue with this data"
+          },
+          "33554484": {
+                    "title": "BGP udate packet with extended attribute data that is too small",
+                    "description": "BGP has received an update packet that is too small to parse a given extended attribute.  This typically means that something has gone wrong between us and the remote peer",
+                    "suggestion": "Gather log data from this and remote peer and open an Issue with this data"
+          },
+          "33554485": {
+                    "title": "BGP update packet received with a repeated attribute",
+                    "description": "BGP has received an update packet with a attribute that is repeated more than one time for a particular route.  This typically means that something has gone wrong between us and the remote peer",
+                    "suggestion": "Gather log data from this and remote peer and open an Issue with this data"
+          },
+          "33554486": {
+                    "title": "BGP udate packet with attribute data that is too large",
+                    "description": "BGP has received an update packet that has too much data in a particular attribute.  This typically means that something has gone wrong between us and the remote peer",
+                    "suggestion": "Gather log data from this and remote peer and open an Issue with this data"
+          },
+          "33554487": {
+                    "title": "BGP update packet with attribute data has a parse error, specific to the attribute",
+                    "description": "BGP has received an update packet with an attribute that when parsed does not make sense in some manner",
+                    "suggestion": "Gather log data from this and remote peer and open an Issue with this data"
+          },
+          "33554488": {
+                    "title": "BGP update packet with a broken optional attribute has caused a withdraw of associated routes",
+                    "description": "BGP has received a update packet with optional attributes that did not parse correctly, instead of resetting the peer, withdraw associated routes and note that this has happened",
+                    "suggestion": "Gather log data from this and remote peer and open an Issue with this data"
+          },
+          "33554489": {
+                    "title": "BGP update packet with a broken length",
+                    "description": "BGP has received a update packet with an attribute that has an incorrect length",
+                    "suggestion": "Gather log data from this and remote peer and open an Issue with this data"
+          },
+          "33554490": {
+                    "title": "BGP update packet with a length different than attribute data length",
+                    "description": "BGP has received a update packet with attributes that when parsed do not correctly add up to packet data length",
+                    "suggestion": "Gather log data from this and remote peer and open an Issue with this data"
+          },
+          "33554491": {
+                    "title": "BGP MRT dump subsystem has encountered an issue",
+                    "description": "BGP has found that the attempted write of MRT data to a dump file has failed",
+                    "suggestion": "Ensure BGP has permissions to write the specified file"
+          },
+          "33554492": {
+                    "title": "BGP Update Packet is to Small",
+                    "description": "The update packet received from a peer is to small",
+                    "suggestion": "Determine the source of the update packet and examine that peer for what has gone wrong"
+          },
+          "33554493": {
+                    "title": "BGP Update Packet is to large",
+                    "description": "The update packet received from a peer is to large",
+                    "suggestion": "Determine the source of the update packet and examine that peer for what has gone wrong"
+          },
+          "33554494": {
+                    "title": "Unknown BGP Capability Received",
+                    "description": "The negotiation of capabilities has received a capability that we do not know what to do with",
+                    "suggestion": "Determine the source of the capability and remove the capability from what is sent"
+          },
+          "33554495": {
+                    "title": "Unable to set TCP MD5 option on socket",
+                    "description": "BGP attempted to setup TCP MD5 configuration on the socket as per configuration but was unable to",
+                    "suggestion": "Please collect log files and open Issue"
+          },
+          "33554496": {
+                    "title": "Unable to set socket MARK option",
+                    "description": "BGP attempted to set the SO_MARK option for a socket and was unable to do so",
+                    "suggestion": "Please collect log files and open Issue"
+          },
+          "33554497": {
+                    "title": "BGP Received a EVPN NLRI with PMSI included",
+                    "description": "BGP has received a type-3 NLRI with PMSI information.  At this time FRR is not capable of properly handling this NLRI type",
+                    "suggestion": "Setup peer to not send this type of data to FRR"
+          },
+          "33554498": {
+                    "title": "BGP has received a local macip and cannot properly handle it",
+                    "description": "BGP has received a local macip from zebra and has no way to properly handle the macip because the vni is not setup properly",
+                    "suggestion": "Ensure proper setup of BGP EVPN"
+          },
+          "33554499": {
+                    "title": "BGP has received a local ESI for deletion",
+                    "description": "BGP has received a local ESI for deletion but when attempting to find the stored data internally was unable to find the information for deletion",
+                    "suggestion": "Gather logging and open an Issue"
+          },
+          "33554500": {
+                    "title": "BGP has received a label stack in a NLRI that does not have the BOS marked",
+                    "description": "BGP when it receives a NLRI with a label stack should have the BOS marked, this received packet does not have this",
+                    "suggestion": "Gather log information from here and remote peer and open an Issue"
+          },
+          "33554501": {
+                    "title": "BGP has attempted to send data to zebra and has failed to do so",
+                    "description": "BGP has attempted to send data to zebra but has been unable to do so",
+                    "suggestion": "Gather log data, open an Issue and restart FRR"
+          },
+          "33554502": {
+                    "title": "BGP has received a capability with an invalid length",
+                    "description": "BGP has received a capability from it's peer who's size is wrong",
+                    "suggestion": "Gather log files from here and from peer and open an Issue"
+          },
+          "33554503": {
+                    "title": "BGP has received capability data with invalid information",
+                    "description": "BGP has noticed that during processing of capability information that data was wrong",
+                    "suggestion": "Gather log files from here and from peer and open an Issue"
+          },
+          "33554504": {
+                    "title": "BGP has recieved capability data specific to a particular vendor",
+                    "description": "BGP has received a capability that is vendor specific and as such we have no knowledge of how to use this capability in FRR",
+                    "suggestion": "On peer turn off this feature"
+          },
+          "33554505": {
+                    "title": "BGP has received capability data for a unknown capability",
+                    "description": "BGP has received a capability that it does not know how to decode.  This may be due to a new feature that has not been coded into FRR or it may be a bug in the remote peer",
+                    "suggestion": "Gather log files from here and from peer and open an Issue"
+          },
+          "33554506": {
+                    "title": "BGP is attempting to write an invalid nexthop length value",
+                    "description": "BGP is in the process of building NLRI information for a peer and has discovered an inconsistent internal state",
+                    "suggestion": "Gather log files and open an Issue, restart FRR"
+          },
+          "33554507": {
+                    "title": "BGP has detected a configuration overwrite during peer collision resolution",
+                    "description": "As part of BGP startup, the peer and ourselves can start connections to each other at the same time. During this process BGP received additional configuration, but it was only applied to one of the two nascent connections. Depending on the result of collision detection and resolution this configuration might be lost.  To remedy this, after performing collision detection and resolution the peer session has been reset in order to apply the new configuration.",
+                    "suggestion": "Gather data and open a Issue so that this developmental escape can be fixed, the peer should have been reset"
+          },
+          "184549377": {
+                    "title": "PIM MSDP Packet Error",
+                    "description": "PIM has received a packet from a peer that does not correctly decode",
+                    "suggestion": "Check MSDP peer and ensure it is correctly working"
+          },
+          "184549378": {
+                    "title": "PIM Configuration Error",
+                    "description": "PIM has detected a configuration error",
+                    "suggestion": "Ensure the configuration is correct and apply correct configuration"
+          },
+          "268435457": {
+                    "title": "WATCHFRR Connection Error",
+                    "description": "WATCHFRR has detected a connectivity issue with one of the FRR daemons",
+                    "suggestion": "Ensure that FRR is still running and if not please open an Issue"
+          }
+}
