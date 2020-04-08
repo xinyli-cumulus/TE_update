@@ -1,0 +1,4 @@
+# Packages required for development
+nose
+tox
+flake8
