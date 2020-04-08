@@ -1,0 +1,125 @@
+Problems:
++ Detect bridge MAC timeout <= ARP timeout.
++ Detect dependent port intersection.  (Port is member of more than one bridge/bond)
++ Failed Services
++ MLX SN2100 SMBIOS ERROR
++ OSPF Unnumbered configured but no /32 on loopback interface.
++ Interface configured for OSPF Unnumbered but interface address does not match loopback /32 address.
++ Redistribute Neighbor configured but no 'redistribute table' statement in BGP or OSPF config.
++ Redistribute Neighbor configured but no /32 configured on any interface other than loopback.
++ Interface configured in VLAN that collides with configured Reserved VLAN Range.
++ Configured Reserved VLAN Range is less than 300 VLANs.
++ Configured Reserved VLAN Range extends past upper limit [4094] of valid VLANs.
++ Configured Reserved VLAN Range includes 4094 and may cause issues with peerlink.4094.
++ Configured Reserved VLAN Range includes VLAN 0 or 1.
++ Sub-interface with parent in bridge that contains same VLAN.
++ Invalid IP address configured.
++ Log Signature 'NMI watchdog: BUG: soft lockup'
++ Log Signature 'CRIT bcm_l3_host_add failed'
++ Log Signature 'CRIT bcm_l3_egress_ecmp_create failed'
++ Log Signature 'CRIT bcm_l3_egress_destroy failed'
++ Log Signature 'CRIT add_update_route: hal_route_to_hw_route'
++ Log Signature 'CRIT bcm_l3_route_add failed'
++ Log Signature 'CRIT Cannot add'
++ Log Signature '_soc_sbusdma_error_details: Error while reading descriptor from host'
++ Log Signature '_soc_sbusdma_desc: Abort Failed'
++ ERROR, ABSENT, BAD, HIGH, LOW and CRITICAL alarms in smonctl 
++ Wrong ONIE on Accton switches
++ CLAG system ID mismatch
++ 'enabled failed' in cl-service-summary
++ 'blk_update_request: critical target error'
++ 'BTRFS: error'
++ 'Skipping commit of aborted transaction'
++ 'BTRFS: Transaction aborted'
++ DHCRELAY configured for non-existent interface.
++ DHCRELAY configured for server without route to server.
++ Log Signature 'un-correctable error'
++ Log Signature 'blk_update_request: I/O error'
++ Log Signature' device reported invalid CHS sector'
++ Log Signature' failed command: WRITE FPDMA QUEUED'
++ Log Signature 'btrfs_dev_stat_print_on_error:'
++ peerlink.subint is member of bridge
++ peerlink interface is not a member of any bridge
++ peerlink interface is a member of more than one bridge
++ Log Signature 'un-correctable error'
++ Log Signature 'sxd_get_dev_list error'
++ Log Signature 'Failed to open SX-API'
++ Log Signature 'failed to configure the requested setup'
++ Log Signature 'CRIT No backends found'
++ Service configured in non-existent VRF
++ clagd-backup-ip is our own address
++ clag peer is not 'alive'
++ Log Signature 'Failed accessing MCIA register through CMD IFC'
++ Log Signature 'sxd_ioctl (CTRL_CMD_ACCESS_REG - MCIA) error'
++ Log Signature 'ERR sfptab_entry_mcia_read module'
++ Log Signature 'Aborting command SX_CMD_ACCESS_REG'
++ Detect unlicensed switches.
++ Log Signature "AttributeError: 'NoneType' object has no attribute 'replace'"
++ 3IE3/3ME3/3IE4 drive mounted without 'discard' option.
++ Invalid ports.conf configuration.
++ VxLAN routing on unsupported ASICs.
++ VxLAN routing on ASICs that require hyperloop without hyperloop configured.
++ 802.1ad and 802.1q on same physical interface.
++ Mixed-Sisters error on Falcon or Eagle core switches.
++ Missing vlan-aware bridge with hyperloop + VxLAN Routing.
++ Log Signature: CM-24508
++ BGP config references non-existent route-map.
++ BGP config references non-existent prefix-list.
++ Route-map references non-existent prefix-list.
++ Route-map references prefix-list from wrong AF.
++ Detect switches running broken versions of CL.
++ System clock is earlier than kernel build date. CM-24846
++ Detect malloc errors.
++ LOG SIG: "i801_smbus 0000:00:1f.3: SMBus is busy, can't use it!"
++ LOG SIG: "[EC 33554505]'
+
+Warnings:
++ IPv4 forwarding disabled on interface.
++ IPv6 forwarding disabled on interface.
++ IPv4 forwarding disabled in FRR.
++ IPv6 forwarding disabled in FRR.
++ IPv4 forwarding disabled in sysctl.
++ IPv6 forwarding disabled in sysctl.
++ IPv4 address configured on interface in FRR.
++ IPv6 address configured on interface in FRR.
++ High input discards on interface.
++ High output discards on interface.
++ Nondeterministic BGP router-id. (No global or instance specific router-id configured)
++ Nondeterministic OSPFv2 router-id. (No global or instance specific router-id configured)
++ Nondeterministic OSPFv3 router-id. (No global or instance specific router-id configured)
++ Bridge configured with no VLANs defined.
++ VxLAN Symmetric Routing configured on Spectrum A0 ASIC.
++ Static route leaking enabled in FRR but vrf_route_leak_enable=FALSE in switchd.conf.
++ Dynamic route leaking enabled in FRR but vrf_route_leak_enable=FALSE in switchd.conf.
++ BCM counters ['TDBGC5', 'TERR', 'RFRG', 'RFCS', 'RERPKT', 'MTUE'] on an interface.
++ EGP redistributed into IGP.
++ Log Signature 'VxLAN feature not supported'
++ Log Signature 'WARN Detected excessive moves'
++ Log Signature'I2C subsystem initialization failed'
++ Log Signature 'start request repeated too quickly, refusing to start'
++ clagd-backup-ip: no route
++ clagd-backup-ip: no local route but reachable via default.
++ clagd-backup-ip statue != active.
++ EUSB disk on Edgecore switches.
++ ['early-access'] found in sources.list
++ NO CLAGD BACKUP-UP configured
++ Unsupported routing protocol configured
++ Excessive link-flaps.
++ Link_Pause enabled.
++ Both EVPN and LNV config found.
++ EVPN config found but 'vxrd' and/or 'vxsnd' found running.
++ Ports in STP Discarding state.
++ CLAG traffic indirect feature is enabled
++ 3IE3/3ME3/3IE4 drive detected.
++ Hyperloop configured.
++ Auto-created interfaces (Parent missing in config)
++ Spectre/Meltdown mitigation(s) enabled.
++ LOG SIG: "[EC " - Unclassified FRR Error.
+
+Informational:
++ 'Boot flags: Cold boot'
++ CORE-FILE-FOUND
++ malloc log message found
++ detect newly added routes to ipv4 or ipv6 route table (<= 10mins old)
++ Detect 'sysrq' log signature.
+
